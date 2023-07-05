@@ -744,7 +744,7 @@ div ul :nth-child(even){
     text-decoration: #C07F00 underline;
 }
 /* ---------------------------  CSS PAGE SERVICIOS -------------------- */
-#body-servicios{
+.body-servicios{
     background-color: #4C3D3D;
     font-family: "Roboto-Regular";
     display: grid;
@@ -763,13 +763,20 @@ div ul :nth-child(even){
 #texto-servicio2{
     color: aqua;
 }
+/* Footer Contacto */    
 .footer-servicios{
     grid-area: footer;
-    background-color: #C07F00;          /* Fondo de Footer  y un enlace a home */
+    display: flex;
+    justify-content: center;
+    background-color: #C07F00;         
     height: 50px;  
-    text-align: center;
+}
+.footer-servicios h1{
+    grid-area: footer; 
+    height: 50px;  
     font-family: "Roboto-Bold";
-    font-weight: 800;
+    color: black;
+    text-decoration: #C07F00 underline;
 }
 /* --------------------------------------------------/* FORMULARIO -------------------------*/
 .body-form{
