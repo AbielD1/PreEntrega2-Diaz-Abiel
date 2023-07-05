@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre_Entrega1-Diaz</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="shortcut icon" href="../img/Favicon-Prototipo.png" type="image/x-icon">
+</head>
+<body class="body-form">
+    <!-- HEADER -->
+    <header class="header-form">
+        <nav>
+            <!-- Logotipo con enlace a home  -->         
+            <div id="logo">
+            <a href="../index.html"><img src="../img/Logo-inicio.png" alt="logo-inicio"></a>                  
+            </div>
+            <!-- Seccion Menú navegable y enlaces a las páginas correspondientes -->
+            <section class="paginas">      
+                <a class="pag1" href="./galeria.html">Galeria</a>
+                <a class="pag2" href="./about.html">About</a>
+                <a class="pag3" href="./servicios.html">Servicios</a>
+                <a class="pag4" href="./contacto.html">Contactos</a>
+                <a class="pag5" href="./formulario.html">Contratación</a>
+            </section> 
+        </nav>
+    </header>
+        <main class="main-form">  
+        <!-- Mini formulario para contratar un trabajo  -->
+                <form action="">
+                <fieldset>
+                    <h1>Ingrese sus datos para contratar un servicio</h1> <!-- IMPUT PARA NOMBRE EMAIL Y EDAD -->
+                    <label id="name-label" for="name"><strong>Nombre</strong> <input id="name" type="text" name="name" required placeholder="Elige un nombre" /></label>
+                    <label for="email" id="email-label"><strong>Email </strong><input id="email" type= "email" name="email"required placeholder="Ingresa un email"/><title> De tipo @hotmail, @gmail, @outlook </title></label>
+                    <label for="number" id="number-label"><strong>Edad(opcional)</strong> <input id="number" type="number" name="number" min="12" max="120" minlength="3" placeholder="Edad"/></label>
+                    <label for="name" id="titulo-servicios"><p> <strong>En que area de servicio quiere que trabajemos </strong></p> </label>
+                    <select id="dropdown" name="dropdown">
+                        <option>(elige una servicio)</option>
+                        <option>Diseño Gráfico</option>
+                        <option>Mantenimiento de PC</option>        <!-- Opciones -->
+                        <option>Edición Multimedia</option>
+                        <option>Creación de pagina web</option>
+                        </select> <!-- Inmput con type radio de elección     -->
+                        <label for="excelente"><p> <strong>¿Qué te parece la organización de mí página web? </strong></p><input id="excelente" type="radio" value="excelente" name="excelente" class="inline"/>Excelente</label>
+                        <label for="aceptable"><input id="aceptable" type="radio" name="aceptable" class="inline" value="aceptable" />Aceptable</label>
+                        <label for="falla"><input id="falla" type="radio" name="falla" class="inline" value="falla" />Falla</label>
+                    <label for="name"><p><strong>Como te enteraste mis servicios</strong></p></label>
+                <select id="dropdown" name="dropdown">
+                    <option>(elige una motivo)</option>
+                    <option>Internet</option>           <!-- Opciones -->
+                    <option>Contactos</option>
+                    <option>Publicidad</option>
+                    <option>Otros</option>
+                        </select>
+                        <h3 class="opciones-titulo">Cuales de estos temas te gustaria que trabajemos</h3>
+                        <p> Puedes elegir (MAX-2) para que podamos trabajarlo desde, Diseño , PC o Edicion</p>
+                        <section>
+                        <label for="name" id="titulo-servicios"></label><!-- Opciones para una pregunta del servicio -->
+                    <label for="op1"><input id="op1" type="checkbox" name="op1" class="inline" value="op1"/> <strong> Idenitdad Coporativa</strong> (Diseño de Marca / Aplicaciones de la marca / Logo / Rediseño de marca) </label>
+                    <label for="op2"><input id="op2" type="checkbox" name="op2" class="inline" value="op2" /><strong> Merchandising</strong>(Remeras / llaveros / gorras / calcos)</label> 
+                    <label for="op3"><input id="op3" type="checkbox" name="op3" class="inline" value="op3" /><strong> Packaging</strong> (Diseño de envases desde Alta/Media/Baja complejidad / Etiquetas de Vino)</label>
+                    <label for="op4"><input id="op4" type="checkbox" name="op4" class="inline" value="op4" /><strong> Señaletica</strong> (Sistema Señaletico de Alta/Media/Baja complejidad)</label>
+                    <label for="op5"><input id="op5" type="checkbox" name="op5" class="inline" value="op5"/><strong> Publicidad</strong> (Afiches / Folletos / Diseño Stand / Ploteado)</label>
+                    <label for="op6"><input id="op6" type="checkbox" name="op6" class="inline" value="op6" /><strong> Web</strong> (Diiseño y Maquetacion HTML Y CSS / Foromularios, Galeria)</label>
+                    <label for="op7"><input id="op7" type="checkbox" name="op7" class="inline" value="op7" /><strong> Edicion Audio y Video</strong> (Edicion en Premier, PS, Audacity)</label>
+                    <label for="op8"><input id="op8" type="checkbox" name="op8" class="inline" value="op8" /><strong> Mantenimiento PC</strong>(Limpeza / Reparación / Seguridad)</label> 
+                    <label for="op9"><input id="op9" type="checkbox" name="op9" class="inline" value="op9" /><strong> Ensamblaeje de Hardwere</strong>(Unir los componentes en la PC)</label>
+                    <label for="cometario-1"><p> Escriba un comentario de que solicitud desea realizar<p><textarea id="comentario-1" name="comentario-1" cols="70" rows="100" placeholder="Escriba una biografia"></textarea></label>
+                <input id="submit" type="submit" value="Enviar"/>
+                </section>
+            </fieldset>
+        </form>
+    </main>
+    <footer class="footer-form"> 
+        <a href="../index.html"><h1>HOME</h1></a> <!-- Footer fixed para que vuelvas a home si tener que ir hasta arriba -->
+</footer>
+</body>
+</html>

@@ -1,0 +1,882 @@
+
+*{
+    padding: 0px;                     /* Margen y padding universales */
+    margin: 0;
+}
+@font-face {
+    font-family:Roboto-Regular ;
+    src: url(../Font/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(../Font/Roboto-Bold.ttf)
+}
+@font-face {
+    font-family: Nexa-Heavy;
+    src: url(../Font/Nexa-Heavy.ttf)
+}
+ /*--------------------------------- INDEX CSS---------------------- */
+/* Body index*/
+.body-index{
+    background-color: #4C3D3D;
+    font-family: "Roboto-Bold";
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "section section"
+        "footer footer";
+}
+/* HEADER INDEX */
+.header-index{
+    grid-area: header;
+}
+/* Menu de navegacion */
+.header__menu{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;           
+    background-color: #FFF7D4;
+}
+/* Logotipo con características */
+.header__divLogo{
+    display: flex;
+    align-items: center;
+}
+.header__divLogo--margin{
+    margin: 15px 50px 15px;
+}
+/* Separación de enlaces del menú */
+.header__menu__sector ul{
+    display: flex;
+    justify-content: left;
+    font-family: "Nexa-Heavy";
+}
+/* Cada clase de pagina con sus propiedades  */
+.header__menu__sector div li{
+    width: 170px;
+    height: 80px;
+    background-color: #C07F00; 
+    font-size: 25px;           
+    text-align: center;
+    list-style: none;
+}
+/* Fondo de enlaces */
+div ul :nth-child(even){
+    background-color: #FFD95A;
+}
+/* Enlaces sin decoracion */
+.nav-link{
+    text-decoration: none;          
+    color: black;
+    font-weight: 700;
+}
+/* Enlaces cambia de color */
+.nav-link:hover{
+    color: white;
+    transition: 0.5s;           
+}
+
+/*-------------------------- MAIN index --------------------------*/
+.main-index{
+    grid-area: main;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Foto perfil */
+.div__foto__abiel--margin{
+    grid-area: main;
+    margin: 10px 100px 10px 30px;        
+}
+.foto__abiel--border{
+    grid-area: main;
+    border-radius: 80px;          
+}
+/* Contenedor del titulo y parrafo */
+.section__info__personal{
+    grid-area: section;
+    background-color: #C07F00;          
+    height: 280px;
+    width: 700px;
+    margin: 5px 160px 140px 0;
+}
+.section__info__personal h1{
+    font-family: "Nexa-Heavy";
+    text-align: center;
+    text-decoration: underline;
+}
+.section__info__personal p{
+    text-align: left;
+    padding: 8px;
+    font-size: 1.2em;
+    font-family: "Roboto-Regular";
+    line-height: 23px;
+}
+/* Ubicacion Iconos de redes y contactos */
+.section__icon__apps{
+    grid-area: main;
+    text-align: center;       
+}
+ /* Separacion de iconos de redes y contactos */
+.section__icon__apps a img{
+    background-color:#FFD95A;
+    width: 65px;
+    padding: 5px;
+}
+/*------Footer index---------------------------------------------- */
+.footer__index{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-evenly ;
+    background-color: #FFD95A;          
+    height: 165px;
+}
+/* Contendedor de los servicios */
+.articulo__index__serv{
+    display: block;
+}
+/* Contenedor de circulo con img */
+.articulo__index__serv--div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF7D4;
+    border-radius: 100%;
+    width: 110px;                       
+    height: 110px;
+    margin: 5px 90px 5px;
+}
+/* Tamaño de imagen */
+.articulo__index__serv--p{
+    width: 300px;                       
+    height: 30px;
+    background-color: #FFF7D4;
+    text-align: center;
+    
+}
+ /* DIVISOR ENTRE SERVICIOS */
+.divisor{              
+    background-color: #C07F00;
+    width: 45px;
+    height: 165px; 
+}
+@media (min-width:320px) and (max-width: 480px){
+    .body-index{
+        display: grid;
+        grid-template-areas:
+        "header"
+        "main"
+        "section"
+        "footer";
+    }
+    .header__menu{
+        grid-area: header;
+        display: flex;
+        justify-content: space-between;
+    }
+    .header__divLogo--margin{
+        margin: 10px;
+        width: 300px;
+    }
+    .nav-items{
+        width: 10px;
+    }
+    .nav-link{
+        text-decoration: none;          
+        color: black;
+        font-weight: 700;
+    }
+    /* Enlaces cambia de color */
+    .nav-link:hover{
+        color: white;
+        transition: 0.5s;           
+    }
+    .header__menu__sector div li{
+        grid-area: section;
+        width: 100px;
+        height: 30px;
+        font-size: 12px;           
+    }
+    /* Enlaces cambia de color */
+    .nav-link:active{
+        color: white;
+        transition: 0.5s;           
+    }
+    /* Main index Resposive */
+    .main-index{
+        grid-area: main;
+        display: inline-block;
+    }
+    .div__foto__abiel--margin{
+        grid-area: main;
+        margin: 15px 0;  
+    }
+    .foto__abiel--border{
+        margin: 0 40px ;
+        grid-area: main;
+        border-radius: 40px; 
+        width: 400px;
+        max-height: 600px;
+        background-image: url(../img/Fotos-perfil/Foto-perfil-responsive.jpg);      
+    }
+    .section__info__personal{ 
+        padding: 3px;
+        grid-area: section;    
+        margin: 40px 10px;
+        background-color: #C07F00;          
+        height: 430px;
+        width: 95%;   
+    }
+    .section__info__personal p{
+        grid-area: section;
+        padding: 10px;
+        font-size: 1.1em;
+    }
+    .section__icon__apps a img{
+        background-color: #FFD95A;
+        border-radius: 20px;
+        width: 55px;
+    }
+    /* FOOTER INDEX RESPOSIVE  */
+    .footer__index{
+        grid-area: footer;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .articulo__index__serv--div {
+        grid-area: footer;
+        width: 120px;                       
+        height: 120px;
+        margin-left:40% ;
+    }
+    .articulo__index__serv--p{
+        grid-area: footer;
+        width: 480px;                    
+        height: 30px;
+    }
+    .divisor{           
+        grid-area: footer;   
+        height:20px;
+        width: 480px;
+    }
+}
+/* ---------------------------  CSS pages GALERIA -------------------- */
+/* BODY DE GALERIA */
+.body-galeria{
+    background-color: #4C3D3D;
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "main main aside" 
+    "section section section "
+    "footer footer footer";
+    font-family: "Roboto-Regular";
+    
+}
+/* HEADER de Galeria */
+.header-index{
+    grid-area: header;
+}
+/* Main de galeria */
+.main-galeria{
+    grid-area: main;
+    display: flex;
+    justify-content:right;
+    margin: 30px;
+}
+/* Espesifidad main + section */
+.main-galeria section{
+    grid-area: section;
+    display: grid;
+    grid-template-rows: repeat(1, 3fr);
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 30px;
+}
+/* Secciones de todas la galeria  */
+.section__todos__proyectos{
+    grid-area: section;
+    display: flex;
+    justify-content:right;
+    grid-area: section;
+}
+/* Todos los protyectos img */
+.section__todos__proyectos{
+    width: 100%;
+    transition: all 300ms;
+    position: relative;
+}
+.btn-primary{
+    background-color: #4C3D3D;
+}
+.btn-primary:hover{
+    background-color: #C07F00;
+    color: white
+}
+/* Efecto en la img en la galeria  */
+.section__todos__proyectos img:hover{
+    transform: scale(0.95);
+}
+/* ASIDE de Galeria */
+.aside-galeria{
+    grid-area: aside;
+    display: block;
+    justify-content: right;
+    background-color: #C07F00;
+    margin: 30px 30px 30px 30px;
+    border-radius: 40px;
+}
+.aside-galeria h3{
+    grid-area: aside;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-family: "Roboto-Bold";
+    font-size: 35px;
+}
+.videos-tp{
+    grid-area: aside;
+    text-align: center;
+    margin: 5px 40px ;
+}
+.aside-galeria p{
+    grid-area: aside;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: large;
+    font-family: "Roboto-Bold";
+    text-align: center;
+}
+/* FOOTER GALERIA */
+.footer-galeria {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #C07F00;         
+    height: 50px;  
+    font-family: "Roboto-Bold";
+    text-decoration: none;
+}
+.volver-home{
+    color:#4C3D3D;
+    text-decoration: none;
+    font-size: 20px;  
+}
+.volver-top{
+    grid-area: footer;
+    color:#4C3D3D;       
+    text-decoration: none;
+    font-size: 20px;  
+}
+.volver-home:hover{
+    color: white;
+    transition: 0.5s;
+}
+.volver-top:hover{
+    color: white;
+    transition: 0.5s;
+}
+@media (min-width:320px) and (max-width:480px){
+    .body-galeria{
+        grid-template-areas: 
+        "header"
+        "main"
+        "section"
+        "aside" 
+        "footer";
+    }
+    .header__menu{
+        grid-area: header;
+        display: flex;
+        justify-content: left
+    }
+    .header__divLogo--margin{
+        margin: 10px;
+        width: 270px;
+    }
+    .nav-items{
+        width: 10px;
+    }
+    .nav-link{
+        text-decoration: none;          
+        color: black;
+        font-weight: 700;
+    }
+    /* Enlaces cambia de color */
+    .nav-link:hover{
+        color: white;
+        transition: 0.5s;           
+    }
+    .header__menu__sector div li{
+        grid-area: section;
+        width: 100px;
+        height: 30px;
+        font-size: 12px;           
+    }
+    /* Enlaces cambia de color */
+    .nav-link:active{
+        color: white;
+        transition: 0.5s;           
+    }
+    .main-galeria{
+        grid-area: main;
+        display: flex;
+        justify-content:center;
+        margin: 20px 10px ;
+    }
+    .main-galeria section{
+        grid-area: main;
+        grid-template-rows: repeat(15, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+    }
+    .section__todos__proyectos{
+        grid-area: main;
+        display: flex;
+        justify-content: center;
+        transition: all 300ms;
+    }
+    .aside-galeria{
+        grid-area: aside;
+        margin: 20px 10px;
+        width: 22rem;
+    }
+    .aside-galeria h3{
+
+        padding: 5px;
+        font-size: 18px;
+    }
+    .aside-galeria p{
+        display: block;
+        padding: 2px;
+        font-size: 15px;
+    }
+    .videos-tp iframe{
+        width: 300px;
+        height: 200px;
+    }
+    .volver-home:active{
+        color: white;
+        transition: 0.2s;
+    }
+    .volver-top:active{
+        color: white;
+        transition: 0.2s;
+    }
+    .footer-galeria {
+        grid-area: footer;
+        display: flex;
+        width: 360px;
+        height: 50px;  
+    }
+    .footer-galeria h1{
+        font-size: 30px;   
+    }
+}
+/* ---------------------------  CSS pages ABOUT -------------------- */
+/* GRILLA DE LA PAGINA ABOUT */
+.body-about{
+    background-color: #4C3D3D;
+    font-family: "Roboto-Regular";
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "main main section"
+    "footer footer footer";
+}
+.header-index{
+    grid-area: header;
+}
+/* Main about */
+.main-about{
+    grid-area: main;
+}
+/* contenedor Titulo de About  */
+.titulo-about{
+    grid-area: section;
+    background-color: #C07F00;
+    width: 700px;                   
+    height: 70px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin: 20px 35% ;
+}
+/* Titulo de About  text*/
+.titulo-about h2{
+    grid-area: main;
+    padding: 5px;
+    font-size: 30px;
+}
+/* Img y biografia*/
+.img-y-descripcion {
+    grid-area: section ;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+/*  contenedor Parrafo 1 de biografia */
+.biografia-1{
+    grid-area: section;
+    display: block
+}
+/* Parrafo 1 de biografia */
+.parrafo1{
+    grid-area: section; 
+    background-color:#FFF7D4;
+    width: 700px;
+    padding: 20px;
+    height: 250px;                 
+    padding: 10px;
+    line-height: 1.5;
+    font-size: 20px;
+    font-family: "Roboto-Regular";
+    margin-bottom: 20px;
+}
+/* Contenedor de hobbys */
+.article-about{
+    grid-area: section;
+}
+/* Titulo de hobbys */
+.article-about h3{
+    color:#4C3D3D;
+    font-weight: 800;
+    background-color: #FFD95A;
+    text-align: center;
+    padding: 10px;
+}
+/* CONTENEDOR TEXTO PARRAFO 2 */
+.biografia-2{
+    grid-area: section;
+    display: flex;
+    justify-content: left;
+}
+/* TEXTO PARRAFO 2 */
+.info-s2{
+    grid-area: section ;
+    display: inline;
+    margin: 30px;
+    font-size: 20px;
+    grid-area: section2;
+    background-color:#FFF7D4;
+    padding: 15px;
+    line-height: 1.3;
+    font-family: "Roboto-Regular";
+}
+/* titulo seccion actividades */
+.auto-motivacion h4{
+    display: flex;
+    justify-content: center;
+    background: #C07F00;
+    width: 20%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+/* Actividades Favoritas */
+.act-hobbys{
+    grid-area: section;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+.accordion{
+    margin: 0 20px 20px 10px;
+}
+.accordion-button{
+    background-color: #C07F00;
+    border: #C07F00;
+}
+.accordion-button:not(.collapsed){
+    background-color: #FFD95A;
+}
+.accordion-body{
+    background-color: #FFF7D4;
+}
+/* Lista de Hobbys */
+.list-group-item{
+    display: flex;
+    color:#4C3D3D;
+    background-color: #C07F00;
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+    width: 100%;
+}
+.list-group-item{
+    background-color: #FFF7D4;
+}
+.list-group-item:hover{
+    background-color: #FFD95A;
+}
+.list-group-item-action:focus{
+    background-color:#FFD95A;
+}
+.list-group-item-action.active{
+    background-color: #FFD95A;
+    color:black
+}
+/* FOOTER ABOUT */
+.footer-about{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    background-color: #C07F00;         
+    height: 50px;  
+    margin-top: 10px;
+}
+.footer-about h1{
+    grid-area: footer; 
+    height: 50px;  
+    font-family: "Roboto-Bold";
+    color: black;
+    text-decoration: #C07F00 underline;
+}
+/* ---------------------------  CSS pages contacto -------------------- */
+/* BODY CONTACTO */
+.body-contacto{
+    background-color: #4C3D3D;
+    font-family: "Roboto-Regular";
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "section section section"
+    "footer footer footer";
+}
+/* HEADER-CONTACTO */
+.header-index{
+    grid-area: header;
+}
+/* MAIN-CONTACTO */
+.main-contacto{
+    grid-area: section;
+    background-image: url(../img/fondo-contacto-img.jpg);
+    display: flex;
+}
+.info-articulo{
+    grid-area: main;
+}/* contenedor contacto */
+.info-articulo h2{
+
+    background-color: #FFD95A;
+    text-align: center;
+    font-size: 30px;
+    height: 40px;               
+    width: 150px;
+    margin: 30px ; 
+}
+.info-articulo h3{
+    background-color: #FFD95A;
+    font-size: 20px;
+    height: 20px;               
+    width: 390px;
+    margin: 15px 30px ;
+    padding: 5px; 
+}
+#cometario{
+    margin: 20px 30px;
+    height: 100px;
+    border: #FFD95A solid 5px;
+}
+
+/* section de parrffos */
+section .info-articulo, .parrafo-contacto1{
+    grid-area: section;
+    background-color: #FFF7D4;
+    width: 360px;
+    height: 60px;   
+    padding: 20px;
+    margin: 30px;
+}
+section .info-articulo, .lista-asociados{
+    grid-area: section;
+    background-color: #FFF7D4;
+    width: 260px;
+    height: 200px;                 
+    margin: 30px ;
+    padding-left: 20px;
+}
+/* Lista de contenido asociado */
+.lista-asociados{
+    grid-area: section;
+    list-style: none;
+    padding: 10px;
+}
+.lista-asociados p{
+    font-style: italic;
+    text-align: center;  
+}
+/* ICONOS APPS */
+.apps-contacto-section{
+    grid-area: section;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 200px;
+    margin: 30px;
+}
+/* Mapa de ubicacion */
+.map{
+    grid-area: section;
+    margin: 30px;   
+}
+.map p{
+    background-color:#FFD95A;
+    text-align: center;
+    font-size: 20px;
+}    
+/* Footer-Contacto */
+.footer-contacto{
+    grid-area: footer;
+    background-color: #C07F00;       
+    height: 50px;  
+    text-align: center;
+    font-family: "Roboto-Bold";
+    font-weight: 800;
+}
+/* ---------------------------  CSS PAGE SERVICIOS -------------------- */
+#body-servicios{
+    background-color: #4C3D3D;
+    font-family: "Roboto-Regular";
+    display: grid;
+    grid-template-areas:
+    "header header header header"
+    "main main main main"
+    "footer footer footer footer";
+}
+.header-servicios{
+    grid-area: header;
+}
+.main-servicios{
+    grid-area: main;
+    display: block;   
+}
+#texto-servicio2{
+    color: aqua;
+}
+.footer-servicios{
+    grid-area: footer;
+    background-color: #C07F00;          /* Fondo de Footer  y un enlace a home */
+    height: 50px;  
+    text-align: center;
+    font-family: "Roboto-Bold";
+    font-weight: 800;
+}
+
+/* --------------------------------------------------/* FORMULARIO -------------------------*/
+.body-form{
+    background-color: #4C3D3D;
+    font-family: "Roboto-Regular";
+    display: grid;
+    grid-template-areas:
+    "header header "
+    "main main"
+    "form form"
+    "footer footer";
+}
+.header-form{
+    grid-area: header;
+}
+.main-form{
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.main-form h1{
+    grid-area: main;
+    background-color:#FFD95A;
+    text-align: center;
+}
+label{
+    display: block;              /* Separacion de los elementos del formulario + tipografia */
+    
+    font-family: "Roboto-Regular";
+    font-size: 18px;
+    
+}
+.inline{
+    width: unset;                       /* Margenn y dejar unididad entre los inline */
+    margin: 0 0.rem 0 0;
+    vertical-align: middle;
+}
+input, textarea,.inline{
+    display:block;
+    font-family: "Roboto-Regular";
+    height: 30px;                    /* Iput textarea innline con fuente */
+}
+input, select{
+    width: 100%;
+    height: 25px;                                /* Anchura de imput y select */
+}
+input[type="radio"]{                        /* opciones radio en inline */
+    display:inline;
+}
+input[type="checkbox"]{                   /* opciones checkbox en inline */
+    display:inline;    
+}
+#titulo-servicios{
+    margin: 0;
+    padding: 10xp;
+}
+.inline{
+    width: 15px;
+    height: 50px;
+    margin: 5px;
+}
+form{
+    grid-area: form;
+    max-width: 700px;
+    min-width: 300px;
+    width: 80vw;             /* formulario medidas*/
+    padding:8px;
+}
+input[type="submit"]{
+    margin:20px auto;
+    display: block;
+    width: 60%;
+    margin-top: 1em auto;
+    margin-bottom: 2em;         /* boton enviar personalizado */
+    height: 2em;
+    font-size:1.1rem;
+    background-color:#4C3D3D;
+    border-color:white;
+    max-width: 300px;
+    color:white
+}
+input[type="submit"]:active{
+    color: aqua;
+}
+h4{
+    text-align:center;
+    color:#FFF7D4;           /* titulo de la pagina*/
+    
+    font-family: sans-serif;
+}
+.opciones-titulo{
+    background-color: #C07F00;
+    font-size: 25px;
+    padding:5px;
+}
+fieldset {
+    background-color:#FFF7D4;
+    padding: 10px;           /* fonndo y margen de formulario  */
+
+}
+p[type="text"]{
+    text-align:center;
+    margin-left:10px ;          /* parrafo con text centrado con margen */
+}
+.footer-form{
+    grid-area: footer;
+    height: 50px;
+    background-color: #C07F00;
+}
+#dropdown{
+    margin: 10px 0;
+}
