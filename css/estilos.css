@@ -21,6 +21,7 @@
     background-color: #4C3D3D;
     font-family: "Roboto-Bold";
     display: grid;
+    grid-template-columns: repeat(1, 3fr);
     grid-template-areas:
         "header header"
         "main main"
@@ -46,11 +47,10 @@
 /* Logotipo con características */
 .header__divLogo{
     display: flex;
-
     align-items: center;
 }
 .header__divLogo--margin{
-    width: 100%;
+    width: 90%;
 }
 /* Separación de enlaces del menú */
 .header__menu__sector ul{
@@ -171,7 +171,7 @@ div ul :nth-child(even){
 @media (min-width:320px) and (max-width: 480px){
     .body-index{
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
         "header"
         "main"
@@ -183,8 +183,13 @@ div ul :nth-child(even){
         display: flex;
         justify-content: space-between;
     }
+    .header__menu .navbar{
+        width: 10%;
+        justify-content: space-between;
+    }
     .header__divLogo--margin{
-        width: 10px;
+        margin: 10px;
+        width: 200px;
     }
     .nav-items{
         width: 10px;
@@ -267,7 +272,7 @@ div ul :nth-child(even){
     .divisor{           
         grid-area: footer;   
         height:20px;
-        width: 480px;
+        width: 100%;
     }
 }
 /* ---------------------------  CSS pages GALERIA -------------------- */
@@ -392,6 +397,7 @@ div ul :nth-child(even){
     color: white;
     transition: 0.5s;
 }
+/* Media Queris Galeria */
 @media (min-width:320px) and (max-width:480px){
     .body-galeria{
         grid-template-columns: 1fr;
@@ -409,10 +415,12 @@ div ul :nth-child(even){
     }
     .header__menu .navbar{
         justify-content: center;
+        width: 110px;
+        padding-left: 10px ;
     }
     .header__divLogo--margin{
-        margin: 10px;
-        width: 270px;
+        margin-left: 50 px;
+        width: 200px;
     }
     .nav-items{
         width: 10px;
