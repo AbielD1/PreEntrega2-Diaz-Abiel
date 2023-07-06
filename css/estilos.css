@@ -50,7 +50,7 @@
     align-items: center;
 }
 .header__divLogo--margin{
-    width: 90%;
+    width: 80%;
 }
 /* Separación de enlaces del menú */
 .header__menu__sector ul{
@@ -184,8 +184,8 @@ div ul :nth-child(even){
         justify-content: space-between;
     }
     .header__menu .navbar{
-        width: 10%;
-        justify-content: space-between;
+        width: 100%;
+        justify-content: center;
     }
     .header__divLogo--margin{
         margin: 10px;
@@ -294,7 +294,7 @@ div ul :nth-child(even){
 }
 .header__menu .navbar{
     width: 100%;
-    justify-content: space-between;
+    justify-content: right;
 }
 /* Main de galeria */
 .main-galeria{
@@ -411,7 +411,7 @@ div ul :nth-child(even){
     .header__menu{
         grid-area: header;
         display: flex;
-        justify-content: left
+        justify-content: center;
     }
     .header__menu .navbar{
         justify-content: center;
