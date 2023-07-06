@@ -34,17 +34,23 @@
 /* Menu de navegacion */
 .header__menu{
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items:center;           
     background-color: #FFF7D4;
+    padding-left: 50px;
+}
+.header__menu .navbar{
+    width: 100%;
+    justify-content: space-between;
 }
 /* Logotipo con características */
 .header__divLogo{
     display: flex;
+
     align-items: center;
 }
 .header__divLogo--margin{
-    margin: 15px 50px 15px;
+    width: 100%;
 }
 /* Separación de enlaces del menú */
 .header__menu__sector ul{
@@ -54,10 +60,10 @@
 }
 /* Cada clase de pagina con sus propiedades  */
 .header__menu__sector div li{
-    width: 170px;
-    height: 80px;
+    width: 150px;
+    height: 60px;
     background-color: #C07F00; 
-    font-size: 25px;           
+    font-size: 20px;           
     text-align: center;
     list-style: none;
 }
@@ -161,9 +167,11 @@ div ul :nth-child(even){
     width: 45px;
     height: 165px; 
 }
+/* Media Queris INDEX */
 @media (min-width:320px) and (max-width: 480px){
     .body-index{
         display: grid;
+        grid-template-columns: repeat(1, 1fr);
         grid-template-areas:
         "header"
         "main"
@@ -176,8 +184,7 @@ div ul :nth-child(even){
         justify-content: space-between;
     }
     .header__divLogo--margin{
-        margin: 10px;
-        width: 300px;
+        width: 10px;
     }
     .nav-items{
         width: 10px;
@@ -268,17 +275,21 @@ div ul :nth-child(even){
 .body-galeria{
     background-color: #4C3D3D;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
     "header header header"
     "main main aside" 
-    "section section section "
+    "section section aside "
     "footer footer footer";
     font-family: "Roboto-Regular";
-    
 }
 /* HEADER de Galeria */
 .header-index{
     grid-area: header;
+}
+.header__menu .navbar{
+    width: 100%;
+    justify-content: space-between;
 }
 /* Main de galeria */
 .main-galeria{
@@ -294,6 +305,7 @@ div ul :nth-child(even){
     grid-template-rows: repeat(1, 3fr);
     grid-template-columns: repeat(3, 2fr);
     grid-gap: 30px;
+    justify-items: center;
 }
 /* Secciones de todas la galeria  */
 .section__todos__proyectos{
@@ -382,6 +394,7 @@ div ul :nth-child(even){
 }
 @media (min-width:320px) and (max-width:480px){
     .body-galeria{
+        grid-template-columns: 1fr;
         grid-template-areas: 
         "header"
         "main"
@@ -393,6 +406,9 @@ div ul :nth-child(even){
         grid-area: header;
         display: flex;
         justify-content: left
+    }
+    .header__menu .navbar{
+        justify-content: center;
     }
     .header__divLogo--margin{
         margin: 10px;
@@ -411,9 +427,12 @@ div ul :nth-child(even){
         color: white;
         transition: 0.5s;           
     }
-    .header__menu__sector div li{
+    .header__menu__sector div ul{
+        margin-top: 10px;
+    }
+    .header__menu__sector div ul li{
         grid-area: section;
-        width: 100px;
+        width: 100%;
         height: 30px;
         font-size: 12px;           
     }
@@ -442,11 +461,10 @@ div ul :nth-child(even){
     }
     .aside-galeria{
         grid-area: aside;
-        margin: 20px 10px;
-        width: 22rem;
+        margin-left: 20px;
+        width: 430px;
     }
     .aside-galeria h3{
-
         padding: 5px;
         font-size: 18px;
     }
@@ -470,7 +488,7 @@ div ul :nth-child(even){
     .footer-galeria {
         grid-area: footer;
         display: flex;
-        width: 360px;
+        width: 100%;
         height: 50px;  
     }
     .footer-galeria h1{
