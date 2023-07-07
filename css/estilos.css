@@ -875,12 +875,11 @@ div ul :nth-child(even){
     background-color:#FFD95A;
     text-align: center;
 }
+
 label{
     display: block;              /* Separacion de los elementos del formulario + tipografia */
-    
     font-family: "Roboto-Regular";
     font-size: 18px;
-    
 }
 .inline{
     width: unset;                       /* Margenn y dejar unididad entre los inline */
@@ -904,7 +903,14 @@ input[type="checkbox"]{                   /* opciones checkbox en inline */
 }
 #titulo-servicios{
     margin: 0;
-    padding: 10xp;
+    padding: 1px;
+}
+.titulo-01-serv p{
+    margin: 0;
+}
+.form-select{
+    padding: 0;
+    margin: 10px 0;
 }
 .inline{
     width: 15px;
@@ -940,6 +946,7 @@ h4{
     
     font-family: sans-serif;
 }
+
 .opciones-titulo{
     background-color: #C07F00;
     font-size: 25px;
@@ -961,4 +968,18 @@ p[type="text"]{
 }
 #dropdown{
     margin: 10px 0;
+}
+.comentario h5{
+    text-align:center;
+    background-color: #C07F00; 
+    font-family: sans-serif;
+}
+#comentario-1{
+    height: 100px;
+}
+@media (min-width: 320px) and (max-width:480px){
+    #comentario-1{
+        width: 340px;
+        height: 100px;
+    }
 }
